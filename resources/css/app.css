@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fcfcfc;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    transition: color 500ms ease;
+    color: #6f6f6f;
+}
+
+a:hover {
+    color: #1f1f1f;
+}
+
+.container {
+    width: 1258px;
+    margin: 0 auto;
+}
+
+header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+header .logo {
+    color: #222;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+header nav a {
+    margin-left: 15px;
+}
+
+.presentation {
+    background: url('../../public/img/news.jpeg') no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    background-color: #727272;
+    position: relative;
+}
+
+.presentation::after {
+    content: 'Лучшие новости со всего мира!';
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    width: 300px;
+}
+
+.presentation::before {
+    content: 'Только самое интересное';
+    position: absolute;
+    top: 270px;
+    left: 50px;
+    color: #d7d7d7;
+    font-size: 15px;
+}
+
+div.block {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid silver;
+    border-bottom-width: 2px;
+    background: #ebebeb;
+    line-height: 170%;
+}
+
+div.block h1 {
+    margin-bottom: 15px;
+}
+
+div.block ul,
+div.block ol {
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.blog-block {
+
+    background: #b6daff8c;
+    margin: 20px auto;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 70%;
+}
+
+.blog-block p {
+    width: 800px;
+    margin-top: 10px;
+}
+.blog-block .blog-btn {
+    font-family: 'Montserrat', sans-serif;
+    background: #44bf4d;
+    margin-top: 20px;
+    border: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blog-block .blog-btn:hover {
+    background: #49b551;
+}
