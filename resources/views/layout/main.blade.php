@@ -14,10 +14,13 @@
     <nav>
         <a href="{{ route('index') }}">Главная</a>
         <a href="{{ route('about') }}">Про нас</a>
+        <a href="{{ route('add_article')}}">Добавить статью</a>
         <a href="{{ route('blog') }}">Блог</a>
+        <a href="{{ route('shop') }}">Товары</a>
     </nav>
 </header>
 <main class="container">
+    @include('blocks.messages')
     @yield('content')
 </main>
 <footer>Все права защищены</footer>
