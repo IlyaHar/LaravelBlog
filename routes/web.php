@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,14 @@ Route::get('/articles/{id}/edit', 'App\Http\Controllers\ArticleController@edit')
 Route::put('/articles/{id}/edit', 'App\Http\Controllers\ArticleController@update')->name('update_article');
 Route::delete('/articles/{id}/delete', 'App\Http\Controllers\ArticleController@destroy')->name('delete_article');
 
+Route::post('/comment/add/{id}', 'App\Http\Controllers\CommentController@store')->name('add_comment');
+Route::delete('{article_id}/comment/{id}/delete', 'App\Http\Controllers\CommentController@destroy')->name('delete_comment');
+
 Route::get('/about-us', 'App\Http\Controllers\StaticController@about')->name('about');
 Route::get('/blog', 'App\Http\Controllers\BlogController@showPage')->name('blog');
 Route::get('/public/shop', 'App\Http\Controllers\ShopController@index')->name('shop');
 Route::get('/public/shop/{id}', 'App\Http\Controllers\ShopController@show')->name('show_product');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

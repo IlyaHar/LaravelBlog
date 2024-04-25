@@ -148,9 +148,24 @@ footer {
     margin-bottom: 20px;
 }
 
+header form {
+    display: inline-block;
+}
+
+header form button {
+    border: 0;
+    cursor: pointer;
+}
+
+.articles .post img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 .articles .post a,
 .back-button,
-.delete-button {
+.delete-button,
+header form button{
     display: inline-block;
     margin-top: 15px;
     background: #bebebe;
@@ -162,7 +177,8 @@ footer {
 
 .articles .post a:hover,
 .back-button:hover,
-.delete-button:hover {
+.delete-button:hover,
+header form button:hover {
     transform: scale(1.1) translateY(-2px);
 }
 
@@ -178,8 +194,16 @@ footer {
     border-bottom-width: 2px;
 }
 
+form.article-form input[type='checkbox'] {
+    width: initial;
+}
+
 form.article-form {
     margin-top: 20px;
+}
+
+form.article-form .login-btn {
+    display: block;
 }
 
 form.article-form label {
@@ -227,8 +251,68 @@ form.article-form input[type='submit']:hover {
     background: #6ab05a;
 }
 
+textarea {
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: 1px solid #d45858 !important;
+}
+
+.ck.ck-editor__main>.ck-editor__editable:focus {
+    border-color: #d45858 !important;
+}
+
+.comment-block {
+    background: #bdbdbd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 15px;
+}
+
+.comment-block p strong {
+    display: inline-block;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.comment-actions {
+    display: flex;
+}
+
+.comment-actions a {
+    margin-right: 10px;
+}
+
+.delete-comment {
+    background: none;
+    border: none;
+    text-decoration: none;
+    transition: color 500ms ease;
+    color: #6f6f6f;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.delete-comment:hover {
+    color: #1f1f1f;
+}
+
+.some-text {
+    margin-top: 50px;
+    text-align: center;
+}
+
 footer {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
+
